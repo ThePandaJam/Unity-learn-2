@@ -16,11 +16,13 @@ public class DestroyOutOfBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if an object is out of the game view, destroy it
         if (transform.position.z > topBoundary)
         {
             Destroy(gameObject);
         } else if (transform.position.z < bottomBoundary)
         {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
     }
